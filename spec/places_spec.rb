@@ -13,6 +13,13 @@ describe(Place) do
       expect(Place.all()).to(eq([]))
     end
   end
+  describe('#save') do
+    it("stores places visited in an array") do
+      test_visit = Place.new("Vancouver")
+      test_visit.save()
+      expect(Place.all())to(eq([test_visit]))
+    end
+  end
 
 
 end
